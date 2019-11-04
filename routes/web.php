@@ -13,4 +13,6 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
+Route::get('/produtos', 'ControladorProduto@index')->name('produtos');
+Route::get('/categorias', 'ControladorCategoria@index')->name('categorias');
