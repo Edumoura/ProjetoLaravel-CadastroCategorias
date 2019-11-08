@@ -16,7 +16,7 @@ Route::get('/', function () {
 })->name('home');
 Route::get('/produtos', 'ControladorProduto@index')->name('produtos');
 Route::get('/categorias', 'ControladorCategoria@index')->name('categorias');
-Route::get('/categorias/novo', 'ControladorCategoria@create');
+Route::get('/categorias/novo', 'ControladorCategoria@create')->name('categoria/novo');
 Route::post('/categorias', 'ControladorCategoria@store')->name('categorias');
 
 
