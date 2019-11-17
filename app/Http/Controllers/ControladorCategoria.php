@@ -80,7 +80,7 @@ class ControladorCategoria extends Controller
     {
         $cat = Categoria::find($id);
         if(isset($cat)) {
-            $cat->nome = $request->input('nomeCategoria');
+            $cat->name = $request->input('nomeCategoria');
             $cat->save();
         }
         return redirect('/categorias');
@@ -97,6 +97,9 @@ class ControladorCategoria extends Controller
         $cat = Categoria::find($id);
         if (isset($cat)) {
             $cat->delete();
+        } else {
+            var_dump($cat );
+            exit;
         }
         return redirect('/categorias');
     }

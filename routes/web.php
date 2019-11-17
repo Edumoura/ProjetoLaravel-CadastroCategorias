@@ -18,5 +18,8 @@ Route::get('/produtos', 'ControladorProduto@index')->name('produtos');
 Route::get('/categorias', 'ControladorCategoria@index')->name('categorias');
 Route::get('/categorias/novo', 'ControladorCategoria@create')->name('categoria/novo');
 Route::post('/categorias', 'ControladorCategoria@store')->name('categorias');
+Route::get('/categorias/apagar/{id}', 'ControladorCategoria@destroy')->name('apagar.destroy');
+Route::get('/categorias/editar/{id}', 'ControladorCategoria@edit')->name('editar.edit');
+Route::post('/categorias/editar/{id}', 'ControladorCategoria@update')->name('editar.update');
 
 

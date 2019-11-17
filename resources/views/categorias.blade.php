@@ -14,13 +14,14 @@
 				</tr>
 			</thead>
 			<tbody>
-				@foreach($cats as $cat) 
+				@foreach($cats as $cat)
+				
 				<tr>
 					<td>{{$cat->id}}</td>
 					<td>{{$cat->name}}</td>
 					<td>
-						<a href="/categorias/editar/{{$cat->id}}" class="btn btn-sm btn-primary">Editar</a>
-						<a href="/categorias/apagar/{{$cat->id}}" class="btn btn-sm btn-danger">Apagar</a>
+						<a href="{{route('editar.edit',$cat->id)}}" class="btn btn-sm btn-primary">Editar</a>
+						<a href="{{route('apagar.destroy',$cat->id)}}" class="btn btn-sm btn-danger">Apagar</a>
 					</td>
 				</tr>
 				@endforeach				
